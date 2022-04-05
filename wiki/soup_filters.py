@@ -31,7 +31,8 @@ def filter_soup(title: str, soup: BeautifulSoup) -> BeautifulSoup:
         tag["href"] = "https://ru.wikipedia.org" + tag["href"]
 
     for tag in body.find_all("sup", class_="reference"):
-        tag.string = tag.a.text
+        if "a" in tag:
+            tag.string = tag["a"].text
 
     final_soup = BeautifulSoup()
     header_tag = final_soup.new_tag("h1")
