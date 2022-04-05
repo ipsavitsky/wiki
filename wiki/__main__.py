@@ -19,7 +19,7 @@ except NoArticleFound:
     console.print("No article found")
     exit(1)
 
-soup = BeautifulSoup(page_info["text"]["*"], "lxml")
+soup = BeautifulSoup(page_info["text"]["*"], "html.parser")
 
 filtered_soup = filter_soup(page_info["title"], soup)
 
