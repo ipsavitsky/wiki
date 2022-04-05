@@ -6,8 +6,8 @@ Works by requesting generated page contents, filtering them, converting them to 
 
 ## Usage:
 ```
-python3 wiki python
+python3 wiki <keyword>
 ```
 
-## Result:
+## Example:
 ![](imgs/screenshot.png)
